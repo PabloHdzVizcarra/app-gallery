@@ -9,9 +9,7 @@ class ImagesApi {
         "Authorization": `Client-ID ${this.KEY}`
       }
     });
-    const data = await response.json();
-    console.log(data);
-    return data;
+    return await response.json();
   }
 }
 

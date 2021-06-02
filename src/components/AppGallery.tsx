@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import Header from "./header/Header";
 import SearchBar from "./search_bar/SearchBar";
 import Main from "./main/Main";
-import { ImagesApi } from "../http/ImagesApi";
+import { Image, ImagesService } from "../use_cases/ImagesService";
 
 function AppGallery() {
-  const images = new ImagesApi();
+  const [imagesList, setImagesList] = useState<Image[]>();
+  const imagesService = new ImagesService();
 
-  images.getImages()
-      .then(console.log)
-      .catch(console.log)
+  imagesService.getImages()
+  .then(images_list => {
+      setImagesList(images_list)
+  })
+  .catch(console.log);
 
   return (
       <div className="main-container">
