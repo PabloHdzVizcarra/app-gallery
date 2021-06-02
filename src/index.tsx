@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppGallery from "./components/AppGallery";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppGallery />
   </React.StrictMode>,
   document.getElementById('root')
 );
