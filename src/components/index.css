@@ -11,6 +11,8 @@ body {
 {
   min-height: 100vh;
   background-color: #F5F7FA;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header__title
@@ -24,6 +26,34 @@ body {
 .main-container
 {
   padding: 0 5px;
+}
+
+.search-bar
+{
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar__input
+{
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #CCD1D9;
+  outline: none;
+  color: #434A54;
+}
+
+.search-bar__button
+{
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #E6E9ED;
+  background-color: #5D9CEC;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Screen Tablet */
