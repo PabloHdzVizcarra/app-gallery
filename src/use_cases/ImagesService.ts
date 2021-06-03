@@ -3,6 +3,8 @@ import { Image } from "../types/types";
 
 interface IGetRandomImages {
   getImages(): any
+
+  searchImage(text: string): any
 }
 
 class ImagesService implements IGetRandomImages {
@@ -14,6 +16,10 @@ class ImagesService implements IGetRandomImages {
 
   public async getImages(): Promise<Image[]> {
     return await this.Api.getImages();
+  }
+
+  public async searchImage(text: string): Promise<Image[]> {
+    return await this.Api.searchImage(text);
   }
 
 }

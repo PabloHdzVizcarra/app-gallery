@@ -11,6 +11,17 @@ class ImagesApi {
     });
     return await response.json();
   }
+
+  public async searchImage(text: string): Promise<any> {
+    const response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${text}`, {
+      headers: {
+        "Accept-Version": "v1",
+        "Authorization": `Client-ID NAydCk2Yg8rkgwciPnzHduEonHnoUCI-HJ2SgGL53hA`
+      }
+    });
+    const data = await response.json();
+    return await data.results;
+  }
 }
 
 export { ImagesApi };
