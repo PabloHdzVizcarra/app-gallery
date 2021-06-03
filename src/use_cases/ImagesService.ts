@@ -1,25 +1,8 @@
 import { ImagesApi } from "../http/ImagesApi";
+import { Image } from "../types/types";
 
 interface IGetRandomImages {
   getImages(): any
-}
-
-export type Image = {
-  id: string
-  alt_description: string
-  description: string
-  created_at: string
-  urls: {
-    full: string
-    raw : string
-    regular: string
-    small: string
-    thumb: string
-  }
-  user: {
-    name: string
-  }
-
 }
 
 class ImagesService implements IGetRandomImages {

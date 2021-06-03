@@ -1,9 +1,17 @@
 import React from "react";
+import { Image } from "../../types/types";
+import ImageComponent from "./ImageComponent";
 
-function Main() {
+type MainProps = {
+  imagesList: Image[]
+}
+
+function Main({ imagesList }: MainProps) {
   return (
       <main className="images">
-        Main Content
+        {imagesList.map((image) =>
+          image ? <ImageComponent image={image} key={image.id} /> : null
+        )}
       </main>
   );
 }
