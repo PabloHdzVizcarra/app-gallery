@@ -6,7 +6,7 @@ class ImagesApi {
     const response = await fetch(`${this.url}`, {
       headers: {
         "Accept-Version": "v1",
-        "Authorization": `Client-ID ${this.KEY}`
+        "Authorization": `Client-ID NAydCk2Yg8rkgwciPnzHduEonHnoUCI-HJ2SgGL53hA`
       }
     });
     return await response.json();
