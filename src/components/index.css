@@ -102,5 +102,8 @@ body {
 /* Screen Tablet */
 @media screen and (max-width: 768px)
 {
-
+  .search-bar__input
+  {
+    flex: 0.8;
+  }
 }
