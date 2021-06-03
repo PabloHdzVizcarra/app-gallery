@@ -61,6 +61,44 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.image
+{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.image__title
+{
+  margin: 0;
+  color: #434A54;
+  padding: 2px 0;
+}
+
+.image__info
+{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.image__picture
+{
+  display: flex;
+  border-radius: 6px;
+}
+
+.image__sub
+{
+  text-align: center;
+}
+
+.image__creator
+{
+  margin: 5px 0;
+}
 /* Screen Tablet */
 @media screen and (max-width: 768px)
 {
